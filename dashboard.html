@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CABSHIA | Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <header class="topbar">
+    <div class="brand">CABSHIA <span>✦</span></div>
+    <button id="logoutBtn" class="logout">Log Out</button>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">TWO PEOPLE. ONE FRIENDSHIP.</p>
+      <h1>Welcome to <span>CABSHIA</span></h1>
+      <p class="subtitle">Two People. One Friendship. Many Memories.</p>
+      <div class="user-info">
+        <span>Logged in as</span>
+        <strong id="userEmail">Loading...</strong>
+      </div>
+    </section>
+
+    <section class="date-card">
+      <div>
+        <p>OUR FRIENDSHIP</p>
+        <h2>Since May 23, 2026</h2>
+      </div>
+      <div class="clock">
+        <span id="clock">00:00:00</span>
+        <small id="today"></small>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <p>YOUR PRIVATE WORLD</p>
+      <h2>Explore CABSHIA</h2>
+    </section>
+
+    <section class="menu-grid">
+      <a href="#" class="menu-card">
+        <span class="menu-icon">📸</span>
+        <h3>Memory Wall</h3>
+        <p>Our special moments and memories.</p>
+      </a>
+
+      <a href="#" class="menu-card">
+        <span class="menu-icon">❓</span>
+        <h3>Question of the Day</h3>
+        <p>A new question for us every day.</p>
+      </a>
+
+      <a href="#" class="menu-card">
+        <span class="menu-icon">💜</span>
+        <h3>Appreciation Box</h3>
+        <p>Small words with big meaning.</p>
+      </a>
+
+      <a href="#" class="menu-card">
+        <span class="menu-icon">✉️</span>
+        <h3>Open When</h3>
+        <p>Messages for special moments.</p>
+      </a>
+
+      <a href="#" class="menu-card">
+        <span class="menu-icon">🎮</span>
+        <h3>Games</h3>
+        <p>Let's play and have fun.</p>
+      </a>
+
+      <a href="#" class="menu-card">
+        <span class="menu-icon">⏳</span>
+        <h3>Time Capsule</h3>
+        <p>Memories for our future selves.</p>
+      </a>
+    </section>
+
+    <footer>
+      <p>Made with care, for a friendship worth remembering.</p>
+      <strong>CABSHIA ✦</strong>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
+
