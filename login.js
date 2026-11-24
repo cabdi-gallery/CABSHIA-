@@ -49,5 +49,7 @@ loginForm.addEventListener("submit", async function (event) {
 
     loginMessage.textContent = "Welcome to CABSHIA!";
 
+window.location.href = "dashboard.html";
+
     // Dashboard will be connected in the next step.
 });
