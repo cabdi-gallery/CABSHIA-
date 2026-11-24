@@ -43,13 +43,19 @@ loginForm.addEventListener("submit", async function (event) {
     });
 
     if (error) {
-        loginMessage.textContent = "Login failed. Check your email and password.";
-        return;
-    }
+    loginMessage.textContent = "Login failed. Check your email and password.";
+    return;
+}
 
-    loginMessage.textContent = "Welcome to CABSHIA!";
+    if (error) {
+    loginMessage.textContent = "Login failed. Check your email and password.";
+    return;
+}
+
+loginMessage.textContent = "Welcome to CABSHIA!";
 
 window.location.href = "dashboard.html";
+    
 
-    // Dashboard will be connected in the next step.
+    
 });
