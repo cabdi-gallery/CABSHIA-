@@ -1,6 +1,6 @@
 
 const SUPABASE_URL = "https://gllpjskthchlvrhaafuj.supabase.co";
-const SUPABASE_KEY = "HALKAN_GELI_PUBLISHABLE_KEY_GAAGA";
+const SUPABASE_KEY = "‎sb_publishable_eTc0tFn1jSmOIxy6aF6Qwg_-hBMqkXh";
 
 const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
