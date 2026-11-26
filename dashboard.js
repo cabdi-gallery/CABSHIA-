@@ -1,6 +1,6 @@
 
 const SUPABASE_URL = "https://gllpjskthchlvrhaafuj.supabase.co";
-const SUPABASE_KEY = "‎sb_publishable_eTc0tFn1jSmOIxy6aF6Qwg_-hBMqkXh";
+const SUPABASE_KEY = "sb_publishable_eTc0tFn1jSmOIxy6aF6Qwg_-hBMqkXh";
 
 const supabaseClient = window.supabase.createClient(
   SUPABASE_URL,
@@ -47,4 +47,3 @@ document.getElementById("logoutBtn").addEventListener("click", async () => {
 
   window.location.replace("login.html");
 });
-
