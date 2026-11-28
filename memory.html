@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,86 +8,140 @@
 </head>
 <body>
 
-  <header class="memory-header">
-    <a href="dashboard.html" class="back-link">← Dashboard</a>
+<header class="memory-header">
+  <a href="dashboard.html" class="back-link">← Dashboard</a>
+  <div class="memory-logo">CABSHIA</div>
+  <p class="memory-label">OUR FRIENDSHIP • SINCE 23 MAY 2026</p>
+  <h1>Our Memory Wall</h1>
+  <p class="memory-description">Two People. One Friendship. Many Memories.</p>
+  <div class="memory-divider">✦ ✧ ✦</div>
+</header>
 
-    <div class="memory-logo">CABSHIA</div>
+<main class="container">
 
-    <p class="memory-label">OUR FRIENDSHIP • SINCE 23 MAY 2026</p>
+  <section class="featured-memory">
+    <div class="featured-label">✦ MEMORY OF THE DAY ✦</div>
+    <div class="featured-content">
+      <div class="featured-image">
+        <span>📸</span>
+        <p>Our Beautiful Moments</p>
+      </div>
+      <div class="featured-info">
+        <span class="memory-date">23 MAY 2026</span>
+        <h2>A Friendship to Remember</h2>
+        <p>
+          Every memory tells a story.
+          Every moment becomes a treasure.
+          This is where our journey lives.
+        </p>
+        <span class="memory-star">✦ A SPECIAL MEMORY ✦</span>
+      </div>
+    </div>
+  </section>
 
-    <h1>Our Memory Wall</h1>
+  <section class="add-section">
+    <div>
+      <span class="section-label">KEEP EVERY MOMENT</span>
+      <h2>Add a New Memory</h2>
+      <p>Save your special moments in one beautiful place.</p>
+    </div>
+    <button id="openFormBtn" class="gold-button">＋ Add Memory</button>
+  </section>
 
-    <p class="memory-description">
-      Two People. One Friendship. Many Memories.
+  <section id="memoryFormSection" class="memory-form-section hidden">
+    <div class="form-heading">
+      <div>
+        <span class="section-label">CREATE A MEMORY</span>
+        <h2>Our New Chapter</h2>
+      </div>
+      <button id="closeFormBtn" class="close-button" aria-label="Close">✕</button>
+    </div>
+
+    <form id="memoryForm">
+      <label for="memoryTitle">Memory title</label>
+      <input id="memoryTitle" type="text" maxlength="100"
+             placeholder="Give this memory a name..." required>
+
+      <label for="memoryDateInput">Memory date</label>
+      <input id="memoryDateInput" type="date" required>
+
+      <label for="memoryCategory">Category</label>
+      <select id="memoryCategory">
+        <option value="Friendship">Friendship</option>
+        <option value="Special Moment">Special Moment</option>
+        <option value="Our Beginning">Our Beginning</option>
+        <option value="Funny Moment">Funny Moment</option>
+        <option value="Celebration">Celebration</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="memoryDescription">Memory description</label>
+      <textarea id="memoryDescription" rows="4" maxlength="1500"
+                placeholder="Write the story behind this memory..."></textarea>
+
+      <label for="memoryImages">Choose photos</label>
+      <input id="memoryImages" type="file" accept="image/*" multiple>
+      <p class="upload-note">You can select multiple photos at once.</p>
+
+      <div id="imagePreview" class="image-preview"></div>
+
+      <button type="submit" class="gold-button save-button">
+        Save This Memory ✦
+      </button>
+    </form>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-heading">
+      <span class="section-label">OUR COLLECTION</span>
+      <h2>Beautiful Memories</h2>
+      <p>Every picture holds a story.</p>
+    </div>
+
+    <div class="gallery-tools">
+      <input id="searchMemories" type="search"
+             placeholder="Search memories...">
+      <select id="filterCategory">
+        <option value="All">All memories</option>
+        <option value="Friendship">Friendship</option>
+        <option value="Special Moment">Special Moment</option>
+        <option value="Our Beginning">Our Beginning</option>
+        <option value="Funny Moment">Funny Moment</option>
+        <option value="Celebration">Celebration</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div id="memoryGallery" class="memory-gallery"></div>
+    <p id="emptyMessage" class="empty-message">
+      ✦ Your memories will appear here. Add your first memory!
     </p>
+  </section>
 
-    <div class="memory-divider">✦ ✧ ✦</div>
-  </header>
-  
-<section class="featured-memory">
-  <div class="featured-label">✦ MEMORY OF THE DAY ✦</div>
-
-  <div class="featured-content">
-    <div class="featured-image">
-      <span>📸</span>
-      <p>Our Beautiful Moments</p>
+  <section class="timeline-section">
+    <div class="gallery-heading">
+      <span class="section-label">OUR STORY</span>
+      <h2>Friendship Timeline</h2>
+      <p>Every chapter is part of our journey.</p>
     </div>
+    <div id="memoryTimeline" class="timeline"></div>
+  </section>
 
-    <div class="featured-info">
-      <span class="memory-date">23 MAY 2026</span>
-      <h2>A Friendship to Remember</h2>
-      <p>
-        Every memory tells a story.
-        Every moment becomes a treasure.
-        This is where our journey lives.
-      </p>
-      <span class="memory-star">✦ A SPECIAL MEMORY ✦</span>
-    </div>
+</main>
+
+<div id="memoryModal" class="modal hidden">
+  <div class="modal-content">
+    <button id="closeModalBtn" class="close-button modal-close">✕</button>
+    <div id="modalBody"></div>
   </div>
-</section>
-  
-<section class="memory-gallery-section">
-  <div class="gallery-heading">
-    <span>OUR COLLECTION</span>
-    <h2>Beautiful Memories</h2>
-    <p>Every picture holds a story.</p>
-  </div>
+</div>
 
-  <div class="memory-gallery">
+<footer class="memory-footer">
+  <div>CABSHIA</div>
+  <p>Two People. One Friendship. Many Memories.</p>
+  <span>✦ SINCE 23 MAY 2026 ✦</span>
+</footer>
 
-    <article class="memory-card">
-      <div class="gallery-placeholder">📸</div>
-      <div class="memory-card-info">
-        <span>OUR BEGINNING</span>
-        <h3>The First Chapter</h3>
-        <p>23 May 2026</p>
-      </div>
-    </article>
-
-    <article class="memory-card">
-      <div class="gallery-placeholder">✨</div>
-      <div class="memory-card-info">
-        <span>SPECIAL MOMENT</span>
-        <h3>A Day to Remember</h3>
-        <p>Beautiful memories</p>
-      </div>
-    </article>
-
-    <article class="memory-card">
-      <div class="gallery-placeholder">🌟</div>
-      <div class="memory-card-info">
-        <span>FRIENDSHIP</span>
-        <h3>Little Happy Moments</h3>
-        <p>Our journey continues</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-  
-  
-
-  <script src="memory.js"></script>
+<script src="memory.js"></script>
 </body>
 </html>
-
